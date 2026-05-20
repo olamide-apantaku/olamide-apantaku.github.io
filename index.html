@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olamide Apantaku | Customer Support Professional</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; color: #333; background: #fff; }
+
+    /* NAV */
+    nav {
+      background: #008080;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .logo { color: #fff; font-size: 1.2rem; font-weight: 700; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: opacity 0.3s;
+    }
+    nav ul li a:hover { opacity: 0.7; }
+
+    /* HERO */
+    .hero {
+      background: #008080;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
+    .hero h2 { font-size: 1.3rem; font-weight: 400; margin-bottom: 20px; opacity: 0.9; }
+    .hero p { font-size: 1rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.85; }
+    .hero a {
+      background: #fff;
+      color: #008080;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.3s;
+    }
+    .hero a:hover { background: #e0f7f7; }
+
+    /* SECTIONS */
+    section { padding: 70px 40px; max-width: 900px; margin: 0 auto; }
+    section h2 {
+      font-size: 1.8rem;
+      color: #008080;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #008080;
+      padding-bottom: 10px;
+    }
+
+    /* ABOUT */
+    .about p { font-size: 1rem; line-height: 1.8; color: #555; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .skill-card {
+      background: #e0f7f7;
+      border-left: 4px solid #008080;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* WORK */
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .repo-card {
+      border: 1px solid #008080;
+      border-radius: 10px;
+      padding: 20px;
+      transition: box-shadow 0.3s;
+    }
+    .repo-card:hover { box-shadow: 0 4px 15px rgba(0,128,128,0.2); }
+    .repo-card h3 { color: #008080; margin-bottom: 10px; font-size: 1rem; }
+    .repo-card p { font-size: 0.9rem; color: #555; margin-bottom: 15px; }
+    .repo-card a {
+      color: #008080;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .repo-card a:hover { text-decoration: underline; }
+
+    /* PORTFOLIO */
+    .portfolio p { font-size: 1rem; color: #555; margin-bottom: 20px; line-height: 1.8; }
+    .portfolio a {
+      background: #008080;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .portfolio a:hover { background: #006666; }
+
+    /* HIRE ME */
+    .hire p { font-size: 1rem; color: #555; margin-bottom: 20px; line-height: 1.8; }
+    .hire a {
+      background: #008080;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .hire a:hover { background: #006666; }
+
+    /* CONNECT */
+    .connect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .connect-card {
+      background: #e0f7f7;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+    }
+    .connect-card h3 { color: #008080; margin-bottom: 10px; }
+    .connect-card a {
+      color: #008080;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .connect-card a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      background: #008080;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Olamide Apantaku</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#work">My Work</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#hire">Hire Me</a></li>
+    <li><a href="#connect">Find Me Online</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Olamide Ajibola Apantaku</h1>
+  <h2>Customer Support & Operations Professional</h2>
+  <p>Building better customer experiences — one interaction at a time.</p>
+  <a href="mailto:apantakuolamide@gmail.com">Get In Touch</a>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Customer Support and Operations Professional with 5+ years of 
+    experience delivering high quality support across BPO, Fintech and 
+    Telecom environments. Skilled in CRM systems, ticket resolution, 
+    escalation handling and client communication, with a proven ability 
+    to maintain high customer satisfaction and meet SLA targets. 
+    Experienced in onboarding and mentoring new agents, coordinating 
+    team workflows and driving operational efficiency. Recognized by 
+    management for strong problem solving, adaptability and a 
+    customer focused approach to service delivery.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Core Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">CRM Management</div>
+    <div class="skill-card">Ticket Resolution</div>
+    <div class="skill-card">Escalation Handling</div>
+    <div class="skill-card">SLA Compliance</div>
+    <div class="skill-card">CSAT & NPS Tracking</div>
+    <div class="skill-card">Customer Onboarding</div>
+    <div class="skill-card">Process Improvement</div>
+    <div class="skill-card">Remote Collaboration</div>
+    <div class="skill-card">Agent Training & Mentoring</div>
+    <div class="skill-card">Fintech Support</div>
+    <div class="skill-card">Multi-channel Support</div>
+    <div class="skill-card">AHT Optimisation</div>
+  </div>
+</section>
+
+<!-- MY WORK -->
+<section id="work">
+  <h2>My Work</h2>
+  <div class="repo-grid">
+    <div class="repo-card">
+      <h3>Customer Support Playbook</h3>
+      <p>A comprehensive guide to support operations, escalation handling and SLA compliance.</p>
+      <a href="https://github.com/olamide-apantaku/customer-support-playbook" target="_blank">View Repository →</a>
+    </div>
+    <div class="repo-card">
+      <h3>Customer Service Case Studies</h3>
+      <p>Real case studies documenting support challenges, actions and measurable outcomes.</p>
+      <a href="https://github.com/olamide-apantaku/customer-service-case-studies" target="_blank">View Repository →</a>
+    </div>
+    <div class="repo-card">
+      <h3>Fintech Knowledge Base</h3>
+      <p>A knowledge base covering fintech support scenarios, KYC troubleshooting and transaction issues.</p>
+      <a href="https://github.com/olamide-apantaku/fintech-support-knowledge-base" target="_blank">View Repository →</a>
+    </div>
+    <div class="repo-card">
+      <h3>CRM Ticketing Workflows</h3>
+      <p>Practical CRM workflows, ticket lifecycle management and SLA tracking frameworks.</p>
+      <a href="https://github.com/olamide-apantaku/crm-ticketing-workflows" target="_blank">View Repository →</a>
+    </div>
+    <div class="repo-card">
+      <h3>Remote Work Operations</h3>
+      <p>A guide to remote work best practices, team communication and productivity systems.</p>
+      <a href="https://github.com/olamide-apantaku/remote-work-operations" target="_blank">View Repository →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <h2>Portfolio</h2>
+  <p>
+    Watch me in action. My portfolio contains real customer experience 
+    videos showcasing my communication style, problem solving approach 
+    and customer handling techniques across different support scenarios.
+  </p>
+  <a href="https://drive.google.com/drive/folders/1-xWXMXB6yM44S2T0m9H_T_iGHY7vwZ-C" target="_blank">View My Portfolio →</a>
+</section>
+
+<!-- HIRE ME -->
+<section class="hire" id="hire">
+  <h2>Hire Me</h2>
+  <p>
+    I am open to remote customer support, customer success and 
+    operations roles. If you are looking for a dedicated, experienced 
+    and results driven professional to join your team, I would love 
+    to hear from you.
+  </p>
+  <a href="mailto:apantakuolamide@gmail.com">Send Me An Email →</a>
+</section>
+
+<!-- FIND ME ONLINE & MY CONTENT -->
+<section id="connect">
+  <h2>Find Me Online</h2>
+  <div class="connect-grid">
+    <div class="connect-card">
+      <h3>LinkedIn</h3>
+      <p>Connect with me professionally</p>
+      <a href="https://www.linkedin.com/in/olamide-apantaku" target="_blank">Visit LinkedIn →</a>
+    </div>
+    <div class="connect-card">
+      <h3>My Content</h3>
+      <p>Follow my CX content on TikTok</p>
+      <a href="https://www.tiktok.com/@everything_cx" target="_blank">Visit TikTok →</a>
+    </div>
+    <div class="connect-card">
+      <h3>GitHub</h3>
+      <p>Explore my repositories and work</p>
+      <a href="https://github.com/olamide-apantaku" target="_blank">Visit GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Olamide Ajibola Apantaku — Customer Support & Operations Professional</p>
+</footer>
+
+</body>
+</html>
