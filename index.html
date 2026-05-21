@@ -10,8 +10,8 @@
     
     body { 
       font-family: 'Inter', sans-serif; 
-      color: #333; 
-      background: #fff;
+      color: #F8FAFC; 
+      background: #0F172A;
       overflow-x: hidden;
     }
 
@@ -28,29 +28,25 @@
 
     /* NAV */
     nav {
-      background: rgba(0, 128, 128, 0.97);
+      background: rgba(15, 23, 42, 0.97);
       padding: 15px 30px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       position: sticky;
       top: 0;
       z-index: 100;
       backdrop-filter: blur(10px);
-      box-shadow: 0 2px 20px rgba(0,128,128,0.3);
-    }
-    nav .logo { 
-      color: #fff; 
-      font-size: 1.1rem; 
-      font-weight: 700;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      border-bottom: 1px solid #334155;
     }
 
-    /* HAMBURGER */
+    /* MENU BUTTON */
     .menu-btn {
-      background: rgba(255,255,255,0.2);
-      border: 1px solid rgba(255,255,255,0.4);
-      color: #fff;
-      padding: 8px 18px;
+      background: rgba(20, 184, 166, 0.15);
+      border: 1px solid #14B8A6;
+      color: #14B8A6;
+      padding: 8px 20px;
       border-radius: 20px;
       cursor: pointer;
       font-size: 0.85rem;
@@ -60,17 +56,18 @@
       letter-spacing: 0.3px;
     }
     .menu-btn:hover {
-      background: rgba(255,255,255,0.3);
+      background: rgba(20, 184, 166, 0.25);
     }
 
-    /* DROPDOWN MENU */
+    /* DROPDOWN */
     .dropdown {
       position: absolute;
       top: 60px;
       right: 30px;
-      background: #fff;
+      background: #1E293B;
+      border: 1px solid #334155;
       border-radius: 12px;
-      box-shadow: 0 10px 40px rgba(0,128,128,0.2);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
       padding: 10px 0;
       min-width: 200px;
       display: none;
@@ -80,26 +77,29 @@
     .dropdown a {
       display: block;
       padding: 10px 20px;
-      color: #333;
+      color: #CBD5E1;
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 500;
       transition: all 0.2s;
+      border-left: 2px solid transparent;
     }
     .dropdown a:hover {
-      background: #f0fafa;
-      color: #008080;
+      background: rgba(20, 184, 166, 0.1);
+      color: #14B8A6;
+      border-left-color: #14B8A6;
       padding-left: 25px;
     }
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, #004d4d 0%, #008080 50%, #00b3b3 100%);
-      color: #fff;
+      background: linear-gradient(135deg, #0F172A 0%, #111827 50%, #1E293B 100%);
+      color: #F8FAFC;
       text-align: center;
       padding: 130px 20px;
       position: relative;
       overflow: hidden;
+      border-bottom: 1px solid #334155;
     }
     .hero::before {
       content: '';
@@ -108,7 +108,7 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+      background: radial-gradient(circle at center, rgba(20,184,166,0.08) 0%, transparent 60%);
       animation: pulse 4s ease-in-out infinite;
     }
     @keyframes pulse {
@@ -120,12 +120,16 @@
       margin-bottom: 15px;
       font-weight: 800;
       position: relative;
+      background: linear-gradient(to right, #F8FAFC, #14B8A6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .hero h2 { 
       font-size: 1.1rem; 
       font-weight: 400; 
-      margin-bottom: 20px; 
-      opacity: 0.9;
+      margin-bottom: 25px; 
+      color: #94A3B8;
       position: relative;
       letter-spacing: 0.3px;
     }
@@ -133,19 +137,18 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 8px;
-      margin-bottom: 35px;
+      gap: 10px;
+      margin-bottom: 40px;
       position: relative;
     }
     .hero-tagline span {
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: #fff;
+      background: rgba(20, 184, 166, 0.1);
+      border: 1px solid rgba(20, 184, 166, 0.3);
+      color: #14B8A6;
       padding: 6px 16px;
       border-radius: 20px;
       font-size: 0.85rem;
       font-weight: 500;
-      backdrop-filter: blur(5px);
     }
     .hero-buttons {
       display: flex;
@@ -163,21 +166,22 @@
       transition: all 0.3s;
     }
     .btn-primary {
-      background: #fff;
-      color: #008080;
+      background: #14B8A6;
+      color: #0F172A;
     }
     .btn-primary:hover { 
-      background: #e0f7f7;
+      background: #0d9488;
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 20px rgba(20,184,166,0.3);
     }
     .btn-secondary {
       background: transparent;
-      color: #fff;
-      border: 2px solid #fff;
+      color: #F8FAFC;
+      border: 1px solid #334155;
     }
     .btn-secondary:hover { 
-      background: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      border-color: #14B8A6;
       transform: translateY(-2px);
     }
 
@@ -188,110 +192,132 @@
       margin: 0 auto; 
     }
     section h2 {
-      font-size: 1.8rem;
-      color: #008080;
+      font-size: 1.6rem;
+      color: #F8FAFC;
       margin-bottom: 10px;
       font-weight: 700;
     }
     .section-line {
-      width: 50px;
+      width: 40px;
       height: 3px;
-      background: linear-gradient(to right, #008080, #00b3b3);
+      background: linear-gradient(to right, #14B8A6, #3B82F6);
       margin-bottom: 35px;
       border-radius: 2px;
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #334155;
     }
 
     /* ABOUT */
     .about p { 
       font-size: 1rem; 
       line-height: 1.9; 
-      color: #555;
+      color: #CBD5E1;
       max-width: 750px;
     }
 
-    /* ACHIEVEMENTS */
+    /* ACHIEVEMENTS — PICTOGRAPHS */
     .achievements-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
       margin-bottom: 50px;
     }
     .achievement-card {
-      background: linear-gradient(135deg, #004d4d, #008080);
+      background: #1E293B;
+      border: 1px solid #334155;
       border-radius: 12px;
-      padding: 25px 20px;
+      padding: 25px 15px;
       text-align: center;
-      color: #fff;
-      transition: transform 0.3s, box-shadow 0.3s;
+      color: #F8FAFC;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     }
     .achievement-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,128,128,0.3);
+      box-shadow: 0 10px 25px rgba(20,184,166,0.15);
+      border-color: #14B8A6;
     }
     .achievement-card .icon {
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 10px;
     }
     .achievement-card .number {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 800;
+      color: #14B8A6;
       margin-bottom: 8px;
     }
     .achievement-card p {
-      font-size: 0.8rem;
-      opacity: 0.9;
+      font-size: 0.78rem;
+      color: #94A3B8;
       line-height: 1.5;
     }
 
     /* PROGRESS BARS */
     .progress-section {
       margin-bottom: 50px;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 30px;
     }
     .progress-section h3 {
-      color: #008080;
-      font-size: 1.1rem;
-      margin-bottom: 20px;
+      color: #F8FAFC;
+      font-size: 1rem;
+      margin-bottom: 25px;
       font-weight: 600;
     }
     .progress-item {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
+    .progress-item:last-child { margin-bottom: 0; }
     .progress-label {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 6px;
-      font-size: 0.9rem;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
       font-weight: 500;
-      color: #444;
+      color: #CBD5E1;
     }
     .progress-bar {
-      background: #e0f7f7;
+      background: #334155;
       border-radius: 10px;
-      height: 10px;
+      height: 8px;
       overflow: hidden;
     }
     .progress-fill {
       height: 100%;
       border-radius: 10px;
-      background: linear-gradient(to right, #004d4d, #00b3b3);
       width: 0%;
       transition: width 1.5s ease;
     }
+    .fill-teal { background: linear-gradient(to right, #14B8A6, #0d9488); }
+    .fill-blue { background: linear-gradient(to right, #3B82F6, #2563eb); }
+    .fill-amber { background: linear-gradient(to right, #F59E0B, #d97706); }
+    .fill-red { background: linear-gradient(to right, #EF4444, #dc2626); }
 
     /* PIE CHART */
     .pie-section {
       margin-bottom: 50px;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 30px;
     }
     .pie-section h3 {
-      color: #008080;
-      font-size: 1.1rem;
+      color: #F8FAFC;
+      font-size: 1rem;
       margin-bottom: 25px;
       font-weight: 600;
     }
     .pie-container {
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 50px;
       flex-wrap: wrap;
     }
     .pie-chart {
@@ -299,14 +325,14 @@
       height: 180px;
       border-radius: 50%;
       background: conic-gradient(
-        #004d4d 0deg 108deg,
-        #008080 108deg 198deg,
-        #00b3b3 198deg 270deg,
-        #66cccc 270deg 360deg
+        #14B8A6 0deg 108deg,
+        #3B82F6 108deg 198deg,
+        #F59E0B 198deg 270deg,
+        #EF4444 270deg 360deg
       );
       flex-shrink: 0;
       position: relative;
-      box-shadow: 0 5px 20px rgba(0,128,128,0.2);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     }
     .pie-chart::after {
       content: '';
@@ -314,22 +340,22 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 80px;
-      height: 80px;
-      background: #fff;
+      width: 75px;
+      height: 75px;
+      background: #1E293B;
       border-radius: 50%;
     }
     .pie-legend {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
     .legend-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-size: 0.9rem;
-      color: #444;
+      color: #CBD5E1;
     }
     .legend-dot {
       width: 12px;
@@ -345,17 +371,20 @@
       gap: 12px;
     }
     .skill-card {
-      background: #f0fafa;
-      border-left: 3px solid #008080;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-left: 3px solid #14B8A6;
       padding: 12px 18px;
       border-radius: 8px;
-      font-size: 0.9rem;
-      color: #333;
+      font-size: 0.88rem;
+      color: #CBD5E1;
       font-weight: 500;
       transition: all 0.3s;
     }
     .skill-card:hover {
-      background: #e0f7f7;
+      background: rgba(20,184,166,0.1);
+      border-color: #14B8A6;
+      color: #F8FAFC;
       transform: translateX(5px);
     }
 
@@ -363,20 +392,21 @@
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      gap: 15px;
     }
     .tool-category {
-      background: #f9f9f9;
+      background: #1E293B;
+      border: 1px solid #334155;
       border-radius: 10px;
       padding: 20px;
     }
     .tool-category h3 {
-      color: #008080;
-      font-size: 0.9rem;
+      color: #94A3B8;
+      font-size: 0.8rem;
       font-weight: 600;
       margin-bottom: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
     }
     .tool-tags {
       display: flex;
@@ -384,11 +414,12 @@
       gap: 8px;
     }
     .tool-tag {
-      background: #e0f7f7;
-      color: #008080;
+      background: rgba(20,184,166,0.1);
+      color: #14B8A6;
+      border: 1px solid rgba(20,184,166,0.2);
       padding: 5px 12px;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 500;
     }
 
@@ -396,39 +427,43 @@
     .repo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 15px;
     }
     .repo-card {
-      border: 1px solid #e0f7f7;
+      background: #1E293B;
+      border: 1px solid #334155;
       border-radius: 12px;
       padding: 25px;
       transition: all 0.3s;
-      background: #fff;
     }
     .repo-card:hover { 
-      box-shadow: 0 8px 25px rgba(0,128,128,0.15);
+      box-shadow: 0 8px 25px rgba(20,184,166,0.1);
       transform: translateY(-3px);
-      border-color: #008080;
+      border-color: #14B8A6;
     }
     .repo-card h3 { 
-      color: #008080; 
       margin-bottom: 10px; 
       font-size: 1rem;
       font-weight: 600;
     }
+    .repo-card h3 a {
+      color: #14B8A6;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .repo-card h3 a:hover { color: #0d9488; }
     .repo-card p { 
-      font-size: 0.85rem; 
-      color: #666; 
+      font-size: 0.83rem; 
+      color: #94A3B8; 
       margin-bottom: 15px;
       line-height: 1.6;
     }
     .repo-card ul {
       list-style: none;
-      margin-bottom: 15px;
     }
     .repo-card ul li {
       font-size: 0.8rem;
-      color: #888;
+      color: #64748b;
       padding: 3px 0;
       padding-left: 12px;
       position: relative;
@@ -437,111 +472,111 @@
       content: '→';
       position: absolute;
       left: 0;
-      color: #008080;
+      color: #14B8A6;
     }
     .repo-card ul li a {
-      color: #888;
+      color: #64748b;
       text-decoration: none;
       transition: color 0.3s;
     }
-    .repo-card ul li a:hover { color: #008080; }
-    .repo-card > a {
-      color: #008080;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.85rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: gap 0.3s;
-    }
-    .repo-card > a:hover { gap: 10px; }
+    .repo-card ul li a:hover { color: #14B8A6; }
 
     /* PORTFOLIO */
     .portfolio-box {
-      background: linear-gradient(135deg, #f0fafa, #e0f7f7);
+      background: #1E293B;
+      border: 1px solid #334155;
       border-radius: 15px;
-      padding: 40px;
+      padding: 50px 40px;
       text-align: center;
     }
+    .portfolio-box h3 {
+      color: #14B8A6;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
     .portfolio-box p { 
-      font-size: 1rem; 
-      color: #555; 
+      font-size: 0.95rem; 
+      color: #94A3B8; 
       margin-bottom: 25px;
       line-height: 1.8;
-      max-width: 600px;
+      max-width: 550px;
       margin-left: auto;
       margin-right: auto;
     }
     .portfolio-box a {
-      background: #008080;
-      color: #fff;
-      padding: 14px 35px;
+      background: #14B8A6;
+      color: #0F172A;
+      padding: 12px 30px;
       border-radius: 30px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       transition: all 0.3s;
       display: inline-block;
     }
     .portfolio-box a:hover { 
-      background: #006666;
+      background: #0d9488;
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,128,128,0.3);
+      box-shadow: 0 5px 15px rgba(20,184,166,0.3);
     }
 
     /* TESTIMONIALS */
     .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
     .testimonial-card {
-      background: #f9f9f9;
+      background: #1E293B;
+      border: 1px solid #334155;
       border-radius: 12px;
-      padding: 25px;
+      padding: 30px 25px;
       position: relative;
       transition: all 0.3s;
     }
     .testimonial-card:hover {
-      box-shadow: 0 8px 25px rgba(0,128,128,0.1);
+      box-shadow: 0 8px 25px rgba(20,184,166,0.1);
+      border-color: #14B8A6;
       transform: translateY(-3px);
     }
     .testimonial-card::before {
       content: '"';
-      font-size: 4rem;
-      color: #008080;
-      opacity: 0.2;
+      font-size: 5rem;
+      color: #14B8A6;
+      opacity: 0.15;
       position: absolute;
-      top: 10px;
+      top: 5px;
       left: 15px;
       line-height: 1;
       font-family: Georgia, serif;
     }
     .testimonial-card p {
-      font-size: 0.9rem;
-      color: #555;
-      line-height: 1.7;
-      margin-bottom: 15px;
-      padding-top: 20px;
+      font-size: 0.88rem;
+      color: #CBD5E1;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      padding-top: 25px;
     }
     .testimonial-card .author {
       font-weight: 600;
-      color: #008080;
+      color: #14B8A6;
       font-size: 0.85rem;
     }
     .testimonial-card .role {
-      font-size: 0.8rem;
-      color: #999;
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-top: 3px;
     }
 
     /* CERTIFICATIONS */
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 12px;
     }
     .cert-card {
-      background: #f0fafa;
+      background: #1E293B;
+      border: 1px solid #334155;
       border-radius: 8px;
       padding: 15px 20px;
       display: flex;
@@ -550,48 +585,57 @@
       transition: all 0.3s;
     }
     .cert-card:hover {
-      background: #e0f7f7;
+      border-color: #14B8A6;
+      background: rgba(20,184,166,0.05);
       transform: translateX(5px);
     }
     .cert-dot {
       width: 8px;
       height: 8px;
-      background: #008080;
+      background: #14B8A6;
       border-radius: 50%;
       flex-shrink: 0;
     }
     .cert-card p {
       font-size: 0.85rem;
-      color: #444;
+      color: #CBD5E1;
       font-weight: 500;
     }
     .cert-card span {
       font-size: 0.75rem;
-      color: #999;
+      color: #64748b;
       display: block;
+      margin-top: 2px;
     }
 
     /* HIRE ME */
     .hire-box {
-      background: linear-gradient(135deg, #004d4d, #008080);
+      background: linear-gradient(135deg, #14B8A6 0%, #0d9488 100%);
       border-radius: 15px;
-      padding: 50px 40px;
+      padding: 60px 40px;
       text-align: center;
-      color: #fff;
     }
-    .hire-box h2 { color: #fff; margin-bottom: 10px; }
+    .hire-box h2 { 
+      color: #0F172A; 
+      margin-bottom: 10px;
+    }
+    .hire-box .section-line { 
+      background: rgba(15,23,42,0.3);
+      margin: 10px auto 25px;
+    }
     .hire-box p {
       font-size: 1rem;
-      opacity: 0.9;
-      margin-bottom: 25px;
+      color: #0F172A;
+      opacity: 0.85;
+      margin-bottom: 30px;
       line-height: 1.8;
-      max-width: 600px;
+      max-width: 550px;
       margin-left: auto;
       margin-right: auto;
     }
     .hire-box a {
-      background: #fff;
-      color: #008080;
+      background: #0F172A;
+      color: #14B8A6;
       padding: 14px 35px;
       border-radius: 30px;
       text-decoration: none;
@@ -600,65 +644,58 @@
       display: inline-block;
     }
     .hire-box a:hover {
-      background: #e0f7f7;
+      background: #1E293B;
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     }
 
     /* CONNECT */
     .connect-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      gap: 15px;
     }
     .connect-card {
-      background: #f0fafa;
+      background: #1E293B;
+      border: 1px solid #334155;
       border-radius: 12px;
       padding: 30px 20px;
       text-align: center;
       transition: all 0.3s;
-      border: 1px solid transparent;
     }
     .connect-card:hover {
-      border-color: #008080;
+      border-color: #14B8A6;
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,128,128,0.1);
+      box-shadow: 0 8px 20px rgba(20,184,166,0.1);
     }
     .connect-card h3 { 
-      color: #008080; 
+      color: #14B8A6; 
       margin-bottom: 8px;
       font-size: 1rem;
     }
     .connect-card p {
-      font-size: 0.85rem;
-      color: #888;
+      font-size: 0.83rem;
+      color: #64748b;
       margin-bottom: 15px;
       line-height: 1.5;
     }
     .connect-card a {
-      color: #008080;
+      color: #CBD5E1;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.9rem;
-      transition: opacity 0.3s;
+      font-size: 0.88rem;
+      transition: color 0.3s;
     }
-    .connect-card a:hover { opacity: 0.7; }
+    .connect-card a:hover { color: #14B8A6; }
 
     /* FOOTER */
     footer {
-      background: #004d4d;
-      color: #fff;
+      background: #111827;
+      color: #64748b;
       text-align: center;
       padding: 30px;
-      font-size: 0.85rem;
-      opacity: 0.9;
-    }
-
-    /* DIVIDER */
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(to right, transparent, #e0f7f7, transparent);
+      font-size: 0.82rem;
+      border-top: 1px solid #334155;
     }
   </style>
 </head>
@@ -666,7 +703,6 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">Olamide Apantaku</div>
   <button class="menu-btn" onclick="toggleMenu()">Menu ☰</button>
   <div class="dropdown" id="dropdown">
     <a href="#about" onclick="closeMenu()">About</a>
@@ -688,15 +724,13 @@
   <h2>Customer Support & Operations Professional</h2>
   <div class="hero-tagline">
     <span>Customer Support</span>
-    <span>CRM & Operations</span>
-    <span>Team Leadership</span>
-    <span>Process Improvement</span>
+    <span>Operations</span>
     <span>Client Success</span>
-    <span>Remote Work</span>
+    <span>Process Improvement</span>
   </div>
   <div class="hero-buttons">
-    <a href="mailto:apantakuolamide@gmail.com" class="btn-primary">Hire Me</a>
-    <a href="#work" class="btn-secondary">View My Work</a>
+    <a href="mailto:apantakuolamide@gmail.com" class="btn-primary">Open to Opportunities</a>
+    <a href="#work" class="btn-secondary">Explore My Work</a>
   </div>
 </div>
 
@@ -707,18 +741,16 @@
   <h2>About Me</h2>
   <div class="section-line"></div>
   <p>
-    I am a Customer Support and Operations Professional with 5+ years of 
+    Customer Support and Operations Professional with 5+ years of 
     experience delivering high quality support across BPO, Fintech and 
-    Telecom environments. Skilled in CRM systems, ticket resolution, 
-    escalation handling and client communication, with a proven ability 
-    to maintain high customer satisfaction and meet SLA targets.
+    Telecom environments. Proficient in CRM systems, ticket resolution, 
+    escalation handling and client communication — with a consistent 
+    record of maintaining high customer satisfaction and meeting SLA targets.
     <br><br>
-    Experienced in onboarding and mentoring new agents, coordinating 
-    team workflows and driving operational efficiency. My background 
-    spans customer support, operations and client success — giving me 
-    a unique understanding of the full customer lifecycle. Recognised 
-    by management for strong problem solving, adaptability and a 
-    customer focused approach to service delivery.
+    Experienced in mentoring new agents, coordinating team workflows and 
+    driving operational efficiency. My background spans customer support, 
+    operations and client success — bringing a full lifecycle perspective 
+    to every team I join.
   </p>
 </section>
 
@@ -772,7 +804,7 @@
         <span>95-100%</span>
       </div>
       <div class="progress-bar">
-        <div class="progress-fill" data-width="97"></div>
+        <div class="progress-fill fill-teal" data-width="97"></div>
       </div>
     </div>
     <div class="progress-item">
@@ -781,7 +813,7 @@
         <span>90%+</span>
       </div>
       <div class="progress-bar">
-        <div class="progress-fill" data-width="90"></div>
+        <div class="progress-fill fill-blue" data-width="90"></div>
       </div>
     </div>
     <div class="progress-item">
@@ -790,7 +822,7 @@
         <span>75%+</span>
       </div>
       <div class="progress-bar">
-        <div class="progress-fill" data-width="75"></div>
+        <div class="progress-fill fill-amber" data-width="75"></div>
       </div>
     </div>
     <div class="progress-item">
@@ -799,7 +831,7 @@
         <span>66%</span>
       </div>
       <div class="progress-bar">
-        <div class="progress-fill" data-width="66"></div>
+        <div class="progress-fill fill-teal" data-width="66"></div>
       </div>
     </div>
     <div class="progress-item">
@@ -808,7 +840,7 @@
         <span>40%</span>
       </div>
       <div class="progress-bar">
-        <div class="progress-fill" data-width="40"></div>
+        <div class="progress-fill fill-blue" data-width="40"></div>
       </div>
     </div>
   </div>
@@ -820,20 +852,20 @@
       <div class="pie-chart"></div>
       <div class="pie-legend">
         <div class="legend-item">
-          <div class="legend-dot" style="background:#004d4d"></div>
-          <span>Account Assistance — 30%</span>
+          <div class="legend-dot" style="background:#14B8A6"></div>
+          <span>Account Assistance</span>
         </div>
         <div class="legend-item">
-          <div class="legend-dot" style="background:#008080"></div>
-          <span>Transaction Issues — 25%</span>
+          <div class="legend-dot" style="background:#3B82F6"></div>
+          <span>Transaction Issues</span>
         </div>
         <div class="legend-item">
-          <div class="legend-dot" style="background:#00b3b3"></div>
-          <span>Customer Enquiries — 20%</span>
+          <div class="legend-dot" style="background:#F59E0B"></div>
+          <span>Customer Enquiries</span>
         </div>
         <div class="legend-item">
-          <div class="legend-dot" style="background:#66cccc"></div>
-          <span>Escalation Handling — 25%</span>
+          <div class="legend-dot" style="background:#EF4444"></div>
+          <span>Escalation Handling</span>
         </div>
       </div>
     </div>
@@ -855,11 +887,11 @@
     <div class="skill-card">CSAT & NPS Tracking</div>
     <div class="skill-card">Customer Onboarding</div>
     <div class="skill-card">Process Improvement</div>
-    <div class="skill-card">Remote Collaboration</div>
     <div class="skill-card">Agent Training & Mentoring</div>
     <div class="skill-card">Fintech Support</div>
-    <div class="skill-card">Multi-channel Support</div>
     <div class="skill-card">AHT Optimisation</div>
+    <div class="skill-card">Multi-channel Support</div>
+    <div class="skill-card">Remote Collaboration</div>
   </div>
 </section>
 
@@ -885,7 +917,6 @@
         <span class="tool-tag">Google Workspace</span>
         <span class="tool-tag">Microsoft Office</span>
         <span class="tool-tag">Notion</span>
-        <span class="tool-tag">Trello</span>
       </div>
     </div>
     <div class="tool-category">
@@ -909,7 +940,7 @@
   <div class="repo-grid">
 
     <div class="repo-card">
-      <h3>Customer Support Playbook</h3>
+      <h3><a href="https://github.com/olamide-apantaku/customer-support-playbook" target="_blank">Customer Support Playbook</a></h3>
       <p>A comprehensive guide to support operations, escalation handling and SLA compliance.</p>
       <ul>
         <li><a href="https://github.com/olamide-apantaku/customer-support-playbook/blob/main/sla-tracker.md" target="_blank">SLA Tracker</a></li>
@@ -917,57 +948,49 @@
         <li><a href="https://github.com/olamide-apantaku/customer-support-playbook/blob/main/customer-onboarding-checklist.md" target="_blank">Customer Onboarding Checklist</a></li>
         <li><a href="https://github.com/olamide-apantaku/customer-support-playbook/blob/main/case-study-mtn-nigeria.md" target="_blank">MTN Nigeria Case Study</a></li>
       </ul>
-      <a href="https://github.com/olamide-apantaku/customer-support-playbook" target="_blank">View Repository →</a>
     </div>
 
     <div class="repo-card">
-      <h3>Support SOPs</h3>
+      <h3><a href="https://github.com/olamide-apantaku/support-sops" target="_blank">Support SOPs</a></h3>
       <p>A library of Standard Operating Procedures covering all core customer support processes.</p>
-      <a href="https://github.com/olamide-apantaku/support-sops" target="_blank">View Repository →</a>
     </div>
 
     <div class="repo-card">
-      <h3>Customer Journey Mapping</h3>
+      <h3><a href="https://github.com/olamide-apantaku/customer-journey-mapping" target="_blank">Customer Journey Mapping</a></h3>
       <p>Comprehensive journey maps covering onboarding, issue resolution, escalation and offboarding.</p>
-      <a href="https://github.com/olamide-apantaku/customer-journey-mapping" target="_blank">View Repository →</a>
     </div>
 
     <div class="repo-card">
-      <h3>CSAT Analysis</h3>
+      <h3><a href="https://github.com/olamide-apantaku/csat-analysis" target="_blank">CSAT Analysis</a></h3>
       <p>A practical guide to tracking, analysing and improving Customer Satisfaction scores.</p>
-      <a href="https://github.com/olamide-apantaku/csat-analysis" target="_blank">View Repository →</a>
     </div>
 
     <div class="repo-card">
-      <h3>Fintech Knowledge Base</h3>
+      <h3><a href="https://github.com/olamide-apantaku/fintech-support-knowledge-base" target="_blank">Fintech Knowledge Base</a></h3>
       <p>A knowledge base covering fintech support scenarios, KYC troubleshooting and transaction issues.</p>
       <ul>
         <li><a href="https://github.com/olamide-apantaku/fintech-support-knowledge-base/blob/main/case-study-finosell.md" target="_blank">Finosell Case Study</a></li>
       </ul>
-      <a href="https://github.com/olamide-apantaku/fintech-support-knowledge-base" target="_blank">View Repository →</a>
     </div>
 
     <div class="repo-card">
-      <h3>CRM Ticketing Workflows</h3>
+      <h3><a href="https://github.com/olamide-apantaku/crm-ticketing-workflows" target="_blank">CRM Ticketing Workflows</a></h3>
       <p>Practical CRM workflows, ticket lifecycle management and SLA tracking frameworks.</p>
-      <a href="https://github.com/olamide-apantaku/crm-ticketing-workflows" target="_blank">View Repository →</a>
     </div>
 
     <div class="repo-card">
-      <h3>Customer Service Case Studies</h3>
+      <h3><a href="https://github.com/olamide-apantaku/customer-service-case-studies" target="_blank">Customer Service Case Studies</a></h3>
       <p>Real case studies documenting support challenges, actions and measurable outcomes.</p>
       <ul>
         <li><a href="https://github.com/olamide-apantaku/customer-service-case-studies/blob/main/case-study-difficult-customer.md" target="_blank">Difficult Customer Case Study</a></li>
         <li><a href="https://github.com/olamide-apantaku/customer-service-case-studies/blob/main/case-study-ticket-backlog.md" target="_blank">Ticket Backlog Case Study</a></li>
         <li><a href="https://github.com/olamide-apantaku/customer-service-case-studies/blob/main/case-study-onboarding-agents.md" target="_blank">Onboarding Agents Case Study</a></li>
       </ul>
-      <a href="https://github.com/olamide-apantaku/customer-service-case-studies" target="_blank">View Repository →</a>
     </div>
 
     <div class="repo-card">
-      <h3>Remote Work Operations</h3>
+      <h3><a href="https://github.com/olamide-apantaku/remote-work-operations" target="_blank">Remote Work Operations</a></h3>
       <p>A guide to remote work best practices, team communication and productivity systems.</p>
-      <a href="https://github.com/olamide-apantaku/remote-work-operations" target="_blank">View Repository →</a>
     </div>
 
   </div>
@@ -980,12 +1003,13 @@
   <h2>Portfolio</h2>
   <div class="section-line"></div>
   <div class="portfolio-box">
+    <h3>Customer Experience Showcase</h3>
     <p>
-      Watch me in action. My portfolio contains real customer experience 
-      videos showcasing my communication style, problem solving approach 
-      and customer handling techniques across different support scenarios.
+      Real customer experience videos showcasing my communication style, 
+      problem solving approach and customer handling techniques across 
+      different support scenarios.
     </p>
-    <a href="https://drive.google.com/drive/folders/1-xWXMXB6yM44S2T0m9H_T_iGHY7vwZ-C" target="_blank">View My Portfolio →</a>
+    <a href="https://drive.google.com/drive/folders/1-xWXMXB6yM44S2T0m9H_T_iGHY7vwZ-C" target="_blank">View Portfolio →</a>
   </div>
 </section>
 
@@ -1006,12 +1030,6 @@
     <div class="testimonial-card">
       <p>"I honestly want to appreciate you. You took the issue more seriously than I did and made sure it was sorted. You followed up, kept me informed and never left me hanging. God bless you."</p>
       <div class="author">Dir Nuel</div>
-      <div class="role">Fintech Client</div>
-    </div>
-
-    <div class="testimonial-card">
-      <p>"I am glad I have you to resolve my issues. You always find a way to make things work no matter how complicated it gets."</p>
-      <div class="author">Real One Creation</div>
       <div class="role">Fintech Client</div>
     </div>
 
@@ -1096,12 +1114,11 @@
 <section class="fade-in" id="hire">
   <div class="hire-box">
     <h2>Hire Me</h2>
-    <div class="section-line" style="margin: 10px auto 25px;"></div>
+    <div class="section-line"></div>
     <p>
-      I am open to remote customer support, customer success and 
-      operations roles. If you are looking for a dedicated, experienced 
-      and results driven professional to join your team, I would love 
-      to hear from you.
+      Open to remote customer support, customer success and operations roles. 
+      If you are looking for a dedicated, results driven professional 
+      to join your team — I would love to hear from you.
     </p>
     <a href="mailto:apantakuolamide@gmail.com">Send Me An Email →</a>
   </div>
@@ -1111,7 +1128,7 @@
 
 <!-- CONNECT -->
 <section class="fade-in" id="connect">
-  <h2>Find Me Online</h2>
+  <h2>Connect</h2>
   <div class="section-line"></div>
   <div class="connect-grid">
     <div class="connect-card">
@@ -1121,12 +1138,12 @@
     </div>
     <div class="connect-card">
       <h3>My Content</h3>
-      <p>Follow my CX content on TikTok</p>
+      <p>CX content and insights on TikTok</p>
       <a href="https://www.tiktok.com/@everything_cx" target="_blank">Visit TikTok →</a>
     </div>
     <div class="connect-card">
       <h3>GitHub</h3>
-      <p>Explore my repositories and work</p>
+      <p>Explore my repositories and documentation</p>
       <a href="https://github.com/olamide-apantaku" target="_blank">Visit GitHub →</a>
     </div>
   </div>
